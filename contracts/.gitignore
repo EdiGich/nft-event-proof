@@ -4,6 +4,8 @@
 # Compilation output
 /dist
 
+/contracts
+
 # pnpm deploy output
 /bundle
 
