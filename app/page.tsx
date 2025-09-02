@@ -1,3 +1,4 @@
+
 "use client";
 
 import {
@@ -21,6 +22,7 @@ import {
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { Button } from "./components/DemoComponents";
 import { Icon } from "./components/DemoComponents";
+import { NFTMint } from "./components/NFTMint";
 
 export default function App() {
   const { setFrameReady, isFrameReady, context } = useMiniKit();
@@ -93,19 +95,7 @@ export default function App() {
 
         {/* Main Content: Placeholder for Event QR + Badge Claim */}
         <main className="flex-1 flex flex-col items-center justify-center space-y-6">
-          <h1 className="text-xl font-bold">🎟️ Event Attendance App</h1>
-          <p className="text-center text-sm text-gray-600">
-            Scan an event QR code to claim your attendance badge.
-          </p>
-
-          {/* Future: Add QR Scan + NFT Mint UI */}
-          <Button
-            variant="primary"
-            size="md"
-            onClick={() => alert("QR Scanner coming soon!")}
-          >
-            Scan Event QR
-          </Button>
+          <NFTMint />
         </main>
 
         {/* Footer */}
