@@ -32,7 +32,7 @@ export function NFTMint() {
 
     setIsMinting(true);
     try {
-      const provider = new BrowserProvider(walletClient.transport, walletClient.chain);
+      const provider = new BrowserProvider(walletClient.transport, walletClient.chain.id);
       const signer = await provider.getSigner(address);
       const contract = new ethers.Contract(contractAddress, MyNFT.abi, signer);
       const transaction = await contract.safeMint(address);
